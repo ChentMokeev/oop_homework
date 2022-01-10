@@ -1,6 +1,13 @@
 void main() {
-  var z = new Dog();
-  z.eat();
+  var tyson = new Dog();
+  tyson.food = 'meat';
+  tyson.makeNoise();
+  tyson.eat();
+
+  var kisa = new Cat();
+  kisa.food = 'fish';
+  kisa.makeNoise();
+  kisa.eat();
 }
 
 class Animal {
@@ -12,44 +19,45 @@ class Animal {
   }
 
   eat() {
-    print('$Animal eat food');
+    print('$Animal eat ${this.food}');
   }
 
   sleep() {}
 }
 
 class Dog extends Animal {
+
   @override
   makeNoise() {
-    print('Dog is sleeping');
+    print('$Dog is sleeping');
   }
 
   @override
   eat() {
-    print('Dog eat meat');
+    print('$Dog eat ${this.food}');
   }
 }
 
 class Cat extends Animal {
   @override
   makeNoise() {
-    print('Cat is sleeping');
+    print('$Cat is sleeping');
   }
 
   @override
   eat() {
-    print('Cat eat fish');
+    print('$Cat eat ${this.food}');
   }
 }
 
 class Horse extends Animal {
   @override
   makeNoise() {
-    print('Horse is sleeping');
+    print('$Horse is sleeping');
   }
 
   @override
   eat() {
-    print('Horse eat grass');
+    print('$Horse eat ${this.food}');
   }
 }
